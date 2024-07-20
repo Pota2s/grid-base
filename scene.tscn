@@ -1,18 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b64chef7o7pyb"]
+[gd_scene load_steps=4 format=3 uid="uid://b64chef7o7pyb"]
 
+[ext_resource type="Script" path="res://scene.gd" id="1_3ctk5"]
 [ext_resource type="PackedScene" uid="uid://cl7nwfg18o422" path="res://block.tscn" id="1_dx5g1"]
 [ext_resource type="PackedScene" uid="uid://dddsfp6vhfgv8" path="res://Player.tscn" id="2_c72a4"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_3ctk5")
 
 [node name="Area2D" parent="." instance=ExtResource("2_c72a4")]
 position = Vector2(0, 32)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_dx5g1")]
-position = Vector2(160, 32)
+position = Vector2(128, 32)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("1_dx5g1")]
-position = Vector2(160, 64)
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("1_dx5g1")]
-position = Vector2(160, 96)
+[node name="Area2D2" parent="." instance=ExtResource("2_c72a4")]
+position = Vector2(32, 64)

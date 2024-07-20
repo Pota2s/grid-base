@@ -18,7 +18,8 @@ func move(direction):
 	raycast.target_position = tile_size * inputs[direction]
 	raycast.force_raycast_update()
 	
-	position += inputs[direction] * tile_size
+	if !raycast.is_colliding():
+		position += inputs[direction] * tile_size
 	
 	if raycast.is_colliding():
 		var object = raycast.get_collider()
